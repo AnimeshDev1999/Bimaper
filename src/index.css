@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply text-slate-800;
+    font-family: "Cabin", sans-serif;
+  }
+  .ico-p {
+    width: 10rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+    filter: grayscale(1) opacity(0.5);
+  }
+  .ico-c {
+    width: 10rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+  }
+  .nav-item {
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .para {
+    @apply text-lg text-slate-700;
+  }
+  .stat-item {
+    @apply text-slate-700 gap-4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .stat-item h2 {
+    @apply text-5xl font-bold text-shade3;
+  }
+  .stat-item p {
+    @apply text-xl font-semibold;
+  }
 }
